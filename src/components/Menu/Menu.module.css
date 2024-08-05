@@ -1,0 +1,177 @@
+.menu {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.menuContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    background-color: rgb(251, 248, 248); 
+    box-shadow: 5px 5px 5px gray;
+    /* border: 1px solid black;  */
+    border-radius: 15px;
+    overflow: hidden;
+    width: 270px;
+    height: auto;
+    text-align: start;
+}
+
+.cardImage {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.cardContent {
+    padding: 0 10px 10px 10px;
+
+    h1, h3 {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    .category {
+        font-style: italic;
+        color: goldenrod;
+        font-weight: 900;
+    }
+}
+  
+.icons {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.rating span {
+    background-color: rgb(254, 254, 254);
+    font-size: 1.2rem;
+    font-weight: 800;
+    border-radius: 50%;
+    padding: 8px;
+    text-align: center;
+}
+
+.heart {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 9;
+}
+
+.heart:hover {
+    color: rgb(175, 42, 42); 
+}
+
+.favorited {
+    color: red; 
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(120, 175, 8);
+    font-size: 1rem;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.add:hover {
+    background-color: beige;
+    border: 2px solid black;
+    color: black;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem ;
+    gap: 3rem;
+    width: 100%;
+}
+
+.search label {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.search select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    min-width: 500px;
+    z-index: 9;
+}
+  
+.searchSelect__control {
+    width: 300px; 
+    margin: 0 auto;
+    z-index: 9;
+}
+  
+.selCat, .selSort {
+    width: 500px;
+    margin: 0 1rem;
+    z-index: 100; 
+}
+
+/* Favotites CSS */
+/* .cardContent .remove {
+    background-color: brown;
+    padding: 5px;
+    width: 100px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: 5px;
+} */
+/* .cardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+} */
+
+.buttonContainer {
+    margin-top: 10px;
+}
+
+.remove {
+    padding: 10px 20px;
+    background-color: brown;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove:hover {
+    background-color: #110000;
+    color: #fff;
+}

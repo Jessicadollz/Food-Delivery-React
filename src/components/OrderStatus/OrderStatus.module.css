@@ -1,0 +1,59 @@
+.container {
+    text-align: center;
+    /* padding: 0 15rem; */
+    font-size: 1rem;
+    margin-top: 8rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.receipt {
+    /* border: 1px solid black; */
+    box-shadow: 5px 5px 5px gray;
+    width: 50%;
+    border-radius: 25px;
+    display: flex;
+    padding: 1.3rem 0;
+    align-items: stretch;
+    justify-content: center;
+    gap: 5rem;
+    background-color: white;
+
+    .ids, .quan {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        align-items: start;
+
+        p {
+            text-align: start;
+           
+        }
+    }
+}
+
+.quan h2 {
+    color: goldenrod;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.quan .items .item h3 {
+    font-size: 1.2rem;
+    text-align: start;
+}
+
+.ids p span {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: brown;
+    font-style: italic;
+}
+
+.ids p {
+    /* color: indigo; */
+    font-size: 1.2rem;
+    font-weight: 900;
+}

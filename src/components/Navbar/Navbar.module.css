@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    padding: 1rem;
+    background-color: rgb(245, 245, 220);
+    cursor: pointer;
+    /* position: sticky; */
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    top: 0;
+    left: 0;
+    flex-wrap: wrap;
+}
+
+.logo {
+    margin-left: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.logo img {
+    width: 90px;
+    height: 50px;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    font-size: 1.4rem;
+    font-weight: 530;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list li {
+    display: inline; /* Make list items inline */
+    margin-right: 15px; 
+}
+  
+.list li a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Optional: inherit color from parent */
+}
+  
+.list li a:hover {
+    color: brown; /* Optional: underline on hover */
+}
+
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-right: 3rem;
+    cursor: pointer;
+
+    .logout, .register {
+        font-size: 1rem;
+        padding: 10px;
+        color: white;
+        background-color: black;
+        font-weight: 500;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .logout:hover {
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+    }
+}
+
+
+
+  

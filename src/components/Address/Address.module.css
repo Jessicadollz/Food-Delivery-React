@@ -1,0 +1,14 @@
+.conatiner {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    h1 {
+        text-align: center;
+        margin: 1rem;
+        padding: 1rem;
+    }
+    
+}
+
+
