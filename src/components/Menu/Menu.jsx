@@ -1,23 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '../Menu/Menu.module.css';
 import menuData from '../Data/Data.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import Select from 'react-select';
-import Cart from '../Cart/Cart.jsx';
 
-function Menu({cart, setCart}) {
-    const [favorites, setFavorites] = useState({});
+function Menu({ cart, setCart }) {
+    const [favorites, setFavorites] = useState([]);
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [sortOption, setSortOption] = useState(null);
-    // const [cart, setCart] = useState([]);
 
+    useEffect(() => {
+        const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
+        setCart(storedCart);
 
-    const toggleFavorite = (id) => {
-        setFavorites((prevFavorites) => ({
-            ...prevFavorites,
-            [id]: !prevFavorites[id]
-        }));
+        const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+        setFavorites(storedFavorites);
+    }, [setCart]);
+
+    useEffect(() => {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }, [cart]);
+
+    useEffect(() => {
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+    }, [favorites]);
+
+    const toggleFavorite = (item) => {
+        setFavorites((prevFavorites) => {
+            const isFavorited = prevFavorites.some(favoriteItem => favoriteItem.id === item.id);
+            if (isFavorited) {
+                return prevFavorites.filter(favoriteItem => favoriteItem.id !== item.id);
+            } else {
+                return [...prevFavorites, item];
+            }
+        });
     };
 
     const handleCategoryChange = (selectedOptions) => {
@@ -29,11 +46,14 @@ function Menu({cart, setCart}) {
     };
 
     const addToCart = (item) => {
-        setCart((prevCart) => [...prevCart, item]);
-    };
-
-    const removeFromCart = (id) => {
-        setCart((prevCart) => prevCart.filter(item => item.id !== id));
+        setCart((prevCart) => {
+            const existingItem = prevCart.find(cartItem => cartItem.id === item.id);
+            if (existingItem) {
+                return prevCart.map(cartItem => cartItem.id === item.id ? { ...cartItem, quantity: (cartItem.quantity || 1) + 1 } : cartItem);
+            } else {
+                return [...prevCart, { ...item, quantity: 1 }];
+            }
+        });
     };
 
     const categories = [...new Set(menuData.map(item => item.category))].map(category => ({ value: category, label: category }));
@@ -66,27 +86,25 @@ function Menu({cart, setCart}) {
             <h1 style={{ textAlign: "center", fontSize: "4rem", marginTop: "5rem" }}>Menu</h1>
             <div className={styles.search}>
                 <div className={styles.selCat}>
-                {/* <label htmlFor="categorySelect">Search: </label> */}
-                <Select placeholder="Select Categories here..."
-                    id="categorySelect" 
-                    options={categories} 
-                    isMulti 
-                    onChange={handleCategoryChange}
-                    className="searchSelect"
-                    classNamePrefix="searchSelect"
-                />
-            </div>
-            <div className={styles.selSort}>
-                {/* <label htmlFor="sortSelect">Sort: </label> */}
-                <Select 
-                placeholder="Sort Here.."
-                    id="sortSelect" 
-                    options={sortOptions} 
-                    onChange={handleSortChange}
-                    className="searchSelect"
-                    classNamePrefix="searchSelect"
-                />
-            </div>
+                    <Select placeholder="Select Categories here..."
+                        id="categorySelect"
+                        options={categories}
+                        isMulti
+                        onChange={handleCategoryChange}
+                        className="searchSelect"
+                        classNamePrefix="searchSelect"
+                    />
+                </div>
+                <div className={styles.selSort}>
+                    <Select
+                        placeholder="Sort Here.."
+                        id="sortSelect"
+                        options={sortOptions}
+                        onChange={handleSortChange}
+                        className="searchSelect"
+                        classNamePrefix="searchSelect"
+                    />
+                </div>
             </div>
 
             <div className={styles.menuContainer}>
@@ -96,9 +114,9 @@ function Menu({cart, setCart}) {
                             <p className={styles.rating}>
                                 <span>{item.rating}</span>
                             </p>
-                            <button 
-                                className={`${styles.heart} ${favorites[item.id] ? styles.favorited : ''}`} 
-                                onClick={() => toggleFavorite(item.id)}
+                            <button
+                                className={`${styles.heart} ${favorites.some(favItem => favItem.id === item.id) ? styles.favorited : ''}`}
+                                onClick={() => toggleFavorite(item)}
                             >
                                 <FontAwesomeIcon icon={faHeart} />
                             </button>
@@ -108,18 +126,12 @@ function Menu({cart, setCart}) {
                             <h1 className={styles.name}>{item.name}</h1>
                             <h3 className={styles.price}>₹{item.price} / Serving</h3>
                             <p className={styles.category}>{item.category}
-                        
-                            {/* <button className={styles.add}>Add</button> */}
-                            <button className={styles.add} onClick={() => addToCart(item)}>Add</button>
-
+                                <button className={styles.add} onClick={() => addToCart(item)}>Add</button>
                             </p>
                         </div>
-        
                     </div>
                 ))}
             </div>
-            
-            {/* <Cart cartItems={cart} removeFromCart={removeFromCart} /> */}
         </div>
     );
 }
