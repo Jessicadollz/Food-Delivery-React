@@ -2,10 +2,12 @@ import React from 'react';
 import styles from './Home.module.css';
 import bannerImage from './Banner.jpg'; 
 import Reviews from './Reviews';
+import Chatbot from '../Chatbot/Chatbot';
 
 function Home() {
   return (
     <>
+    <Chatbot />
       <div className={styles.container}>
         <img src={bannerImage} alt="Banner" className={styles.image} />
 

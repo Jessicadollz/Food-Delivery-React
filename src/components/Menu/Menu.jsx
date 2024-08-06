@@ -4,6 +4,7 @@ import menuData from '../Data/Data.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import Select from 'react-select';
+import Chatbot from '../Chatbot/Chatbot';
 
 function Menu({ cart, setCart }) {
     const [favorites, setFavorites] = useState([]);
@@ -82,6 +83,8 @@ function Menu({ cart, setCart }) {
         });
 
     return (
+        <>
+        <Chatbot />
         <div className={styles.menu}>
             <h1 style={{ textAlign: "center", fontSize: "4rem", marginTop: "5rem" }}>Menu</h1>
             <div className={styles.search}>
@@ -133,6 +136,7 @@ function Menu({ cart, setCart }) {
                 ))}
             </div>
         </div>
+        </>
     );
 }
 

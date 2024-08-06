@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Cart.module.css';
+import Chatbot from '../Chatbot/Chatbot';
 
 function Cart({ cart, setCart }) {
   const [address, setAddress] = useState('');
@@ -85,6 +86,7 @@ function Cart({ cart, setCart }) {
 
   return (
     <>
+    <Chatbot />
     <h1 style={{textAlign: "center", marginTop: "8rem"}}>Your Cart</h1>
       <div className={styles.container}>
         {cart.map((item) => (

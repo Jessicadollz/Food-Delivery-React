@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import styles from './OrderStatus.module.css';
+import Chatbot from '../Chatbot/Chatbot';
 
 function OrderStatus() {
   const location = useLocation();
@@ -42,6 +43,8 @@ function OrderStatus() {
   );
 
   return (
+    <>
+    <Chatbot />
     <div className={styles.container}>
       <h1 style={{marginBottom: "1rem"}}>Order Status</h1>
       <div className={styles.receipt}>
@@ -68,6 +71,7 @@ function OrderStatus() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

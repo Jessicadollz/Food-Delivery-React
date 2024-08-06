@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../Menu/Menu.module.css';
+import Chatbot from '../Chatbot/Chatbot';
 
 function Favorites() {
     const [favorites, setFavorites] = useState(() => {
@@ -24,6 +25,8 @@ function Favorites() {
     };
 
     return (
+        <>
+        <Chatbot />
         <div className={styles.menu}>
             <h1 style={{ textAlign: "center", fontSize: "3rem", marginTop: "7rem", marginBottom: "2rem" }}>Favorites</h1>
             <div className={styles.menuContainer}>
@@ -59,6 +62,7 @@ function Favorites() {
                 ))}
             </div>
         </div>
+        </>
     );
 }
 
