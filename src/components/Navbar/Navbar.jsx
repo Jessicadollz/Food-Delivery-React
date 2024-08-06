@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Navbar.module.css';
 import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
+import logo from '../../assets/logo.png'
 
 function Navbar() {
   const navigate = useNavigate(); // Initialize useNavigate
@@ -14,7 +15,7 @@ function Navbar() {
   return (
     <div className={styles.container}>
       <div className={styles.logo}>
-        <img src="./src/assets/logo.png" alt="logo" />
+        <img src={logo} alt="logo" />
         Jess Kitchen
       </div>
       <ul className={styles.list}>

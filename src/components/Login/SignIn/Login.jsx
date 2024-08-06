@@ -3,7 +3,8 @@ import styles from './Login.module.css';
 import { Link } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../firebase';
-// import { toast } from 'react-toastify';
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 function Login() {
     const [email, setEmail] = useState("");
@@ -63,6 +64,7 @@ function Login() {
                     Not a User? <Link to="/signup">Register</Link>
                 </p>
             </form>
+            {/* <ToastContainer /> */}
         </div>
     );
 }
