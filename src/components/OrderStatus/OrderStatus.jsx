@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import styles from './OrderStatus.module.css';
 import Chatbot from '../Chatbot/Chatbot';
+import Footer from '../Footer/Footer';
 
 function OrderStatus() {
   const location = useLocation();
@@ -71,6 +72,8 @@ function OrderStatus() {
         </div>
       </div>
     </div>
+
+    <Footer />
     </>
   );
 }

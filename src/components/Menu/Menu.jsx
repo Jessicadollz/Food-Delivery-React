@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import Select from 'react-select';
 import Chatbot from '../Chatbot/Chatbot';
+import Footer from '../Footer/Footer.jsx';
 
 function Menu({ cart, setCart }) {
     const [favorites, setFavorites] = useState([]);
@@ -135,6 +136,8 @@ function Menu({ cart, setCart }) {
                     </div>
                 ))}
             </div>
+            
+            <Footer />
         </div>
         </>
     );

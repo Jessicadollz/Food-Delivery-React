@@ -3,6 +3,7 @@ import styles from './Home.module.css';
 import bannerImage from './Banner.jpg'; 
 import Reviews from './Reviews';
 import Chatbot from '../Chatbot/Chatbot';
+// import Footer from '../Footer/Footer'
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
           <Reviews />
         </div>
       </div>
+      {/* <Footer /> */}
     </>
   );
 }

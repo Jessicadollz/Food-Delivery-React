@@ -1,11 +1,27 @@
+.container {
+    /* background-image: url("../../../assets/restro.png"); */
+    background-image: url("../../../assets/login.jpg");
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    height: 100vh;
+    margin-top: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .formBox {
-    max-width: 450px;
-    margin: 150px auto;
+    min-width: 450px;
+    /* margin: 150px auto; */
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 3px solid #f8f6f6;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px gray;
-    background-color: white;
+    /* box-shadow: 5px 5px 5px rgb(246, 244, 244); */
+    /* background-color: white; */
+    background-color: transparent;
 }
 
 h3 {
@@ -22,7 +38,8 @@ h3 {
 
 .formContainer label {
     margin-bottom: 5px;
-    font-weight: 900;
+    font-weight: 500;
+    color: white;
 }
 
 .formControl {
@@ -44,7 +61,7 @@ h3 {
 }
 
 .btnPrimary {
-    background-color: #007bff;
+    background-color: #000911;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -55,7 +72,9 @@ h3 {
 }
 
 .btnPrimary:hover {
-    background-color: #0056b3;
+    background-color: white;
+    color: #000911;
+    border: 1px solid black;
 }
 
 p {
@@ -64,9 +83,9 @@ p {
 }
 
 p a {
-    color: #007bff;
+    /* color: #f8fbfe; */
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 p a:hover {

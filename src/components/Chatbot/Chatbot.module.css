@@ -1,4 +1,4 @@
-.chatbotContainer {
+ .chatbotContainer {
     position: fixed;
     bottom: 5px;
     right: 10px;
@@ -19,7 +19,7 @@
 }
 .chatbotIcon .icon{
     cursor: pointer;
-    background-color: rgb(89, 26, 205);
+    background-color: indigo;
     padding: 0.8rem;
     margin: 0rem 1rem;
     border-radius: 50%;
@@ -28,10 +28,13 @@
 .chatbotSegment {
     width: 100%;
 }
-  
+
+/* .glfuN {
+    background: black !important;
+} */
 @media screen and (max-width: 768px) {
     .chatbotIcon .icon{
       margin: 0;
     }
     
-}
+} 

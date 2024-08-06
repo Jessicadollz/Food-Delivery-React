@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Cart.module.css';
 import Chatbot from '../Chatbot/Chatbot';
+import Footer from '../Footer/Footer'
 
 function Cart({ cart, setCart }) {
   const [address, setAddress] = useState('');
@@ -124,6 +125,7 @@ function Cart({ cart, setCart }) {
           <button className={styles.proceed} onClick={handlePayment}>Proceed Payment</button>
         )}
       </div>
+      <Footer />
     </>
   );
 }

@@ -28,6 +28,8 @@ function Login() {
     };
 
     return (
+        <>
+        <div className={styles.container}>
         <div className={styles.formBox}>
             <form onSubmit={handleSubmit}>
                 <h3>Login</h3>
@@ -60,12 +62,14 @@ function Login() {
                     </button>
                 </div>
                 
-                <p>
+                <p className={styles.register}>
                     Not a User? <Link to="/signup">Register</Link>
                 </p>
             </form>
             {/* <ToastContainer /> */}
         </div>
+        </div>
+        </>
     );
 }
 

@@ -4,13 +4,15 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth, db } from '../../firebase';
 import { setDoc, doc } from 'firebase/firestore';
 // import {  toast } from 'react-toastify';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 function Register() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [fname, setFname] = useState("");
     const [lname, setLname] = useState("");
+    const navigate = useNavigate();
 
     const handleRegister = async (e) => {
         e.preventDefault();
@@ -25,7 +27,8 @@ function Register() {
                     lastName: lname,
                 });
             }
-            console.log("User Registered Successfully!");
+            alert("User Registered Successfully!");
+            navigate("/login");
             // toast.success("User Registered Successfully!!!", {
             //     position: "top-center",
             // });
@@ -38,6 +41,7 @@ function Register() {
     }
   return (
     <>
+    <div className={styles.container}>
     <div className={styles.formBox} >
         <form onSubmit={handleRegister}>
             <h3>Sign Up</h3>
@@ -93,6 +97,7 @@ function Register() {
           Already Registered? <Link to="/login">Login</Link>
         </p>
         </form>
+        </div>
         </div>
     </>
   )

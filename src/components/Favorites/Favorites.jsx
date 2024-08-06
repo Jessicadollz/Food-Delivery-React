@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../Menu/Menu.module.css';
 import Chatbot from '../Chatbot/Chatbot';
+import Footer from '../../components/Footer/Footer'
 
 function Favorites() {
     const [favorites, setFavorites] = useState(() => {
@@ -62,6 +63,8 @@ function Favorites() {
                 ))}
             </div>
         </div>
+
+        <Footer />
         </>
     );
 }
