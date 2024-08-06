@@ -64,7 +64,7 @@ function OrderStatus() {
               <p style={{textAlign: "center" , marginTop: "10rem"}}>No items ordered</p>
             )}
           </div>
-          <h3 style={{fontSize: "1rem"}}> <span>Total Order Price: Rs.</span> {totalPrice}</h3>
+          <h3 style={{fontSize: "1.2rem", color: "navy"}}> <span>Total Order Price: Rs.</span> {totalPrice}</h3>
         </div>
       </div>
     </div>
