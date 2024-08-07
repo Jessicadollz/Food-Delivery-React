@@ -9,14 +9,15 @@ function Home() {
   return (
     <>
     <Chatbot />
-      <div className={styles.container}>
+      <div className={styles.containers}>
         <img src={bannerImage} alt="Banner" className={styles.image} />
 
         <div className={styles.reviews}>
-          <h1 style={{textAlign: "center", margin: "1.5rem"}}>Our Customer's Reviews</h1>
-          <Reviews />
+          <h1>Our Customer's Reviews</h1>
+          {/* <Reviews /> */}
         </div>
       </div>
+      <Reviews />
       {/* <Footer /> */}
     </>
   );

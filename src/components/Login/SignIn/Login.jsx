@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Login.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../firebase';
 // import { ToastContainer, toast } from 'react-toastify';
@@ -9,13 +9,15 @@ import { auth } from '../../firebase';
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             await signInWithEmailAndPassword(auth, email, password);
             alert("User LoggedIn Successfully!!!");
-            window.location.href = "/menu";
+            navigate('/menu', { replace: true });
+            // window.location.href = "/menu";
             // toast.success("User LoggedIn Successfully!!!", {
             //     position: "top-center",
             // });

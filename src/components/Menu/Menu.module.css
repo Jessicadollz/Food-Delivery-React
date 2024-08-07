@@ -177,3 +177,17 @@
     background-color: #110000;
     color: #fff;
 }
+
+@media screen and (max-width: 750px) {
+    .search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .selCat, .selSort {
+        max-width: 200px;
+    }
+}

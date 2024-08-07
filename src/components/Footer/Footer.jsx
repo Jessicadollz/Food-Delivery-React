@@ -3,12 +3,14 @@ import styles from './Footer.module.css'
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
+import logo from '../../assets/logo.png';
 
 function Footer() {
   return (
     <>
         <div className={styles.Footer}>
             <div className={styles.Footer1}>
+                <img src={logo} alt="logo" />
                 <h1>(+91) 9876543210</h1>
                 <p>Hyderabad, Telangana, India</p>
             </div>

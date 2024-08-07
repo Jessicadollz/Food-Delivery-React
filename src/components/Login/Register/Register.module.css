@@ -43,6 +43,7 @@ h3 {
 }
 
 .formControl {
+    min-width: 250px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -113,4 +114,18 @@ p a:hover {
 
 .Toastify__toast-container {
     margin-top: 60px; /* Adjust the top margin if needed */
+}
+
+@media screen and (max-width: 700px) {
+    .formBox {
+        max-width: 80%;
+        min-width: 0; /* Ensure it shrinks below 450px if needed */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .formBox {
+        max-width: 90%;
+        min-width: 0; /* Ensure it shrinks below 450px if needed */
+    }
 }

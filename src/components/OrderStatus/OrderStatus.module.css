@@ -58,3 +58,34 @@
     font-size: 1.2rem;
     font-weight: 900;
 }
+
+@media screen and (max-width: 1200px) {
+    .receipt {
+        width: 90%;
+        display: flex;
+        padding: 1.3rem 1rem;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .receipt {
+        width: 90%;
+        display: flex;
+        padding: 1.3rem 1rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;
+    }
+
+    .receipt  .ids, .quan {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}

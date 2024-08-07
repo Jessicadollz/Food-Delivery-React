@@ -12,6 +12,8 @@
 }
 
 .Footer1 {
+    text-align: center;
+
     h1 {
         font-size: 1.7rem;
     }
@@ -19,6 +21,11 @@
     p {
         font-size: 1.5rem;
         font-weight: 600;
+    }
+
+    img {
+        width: 100px;
+        height: 70px;
     }
 }
 
@@ -33,4 +40,11 @@
     justify-content: space-between;
     gap: 1rem;
     font-size: 2rem;
+}
+
+@media screen and (max-width: 550px) {
+    .Footer {
+        display: flex;
+        flex-direction: column;
+    }
 }

@@ -36,6 +36,7 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  margin-top: 0rem;
 }
 
 .reviewList {
@@ -108,7 +109,7 @@
 }
 
 .reviewForm textarea {
-  height: 100px;
+  height: 50px;
   resize: vertical;
 }
 
@@ -143,3 +144,20 @@
 .deleteButton:hover {
   background-color: #d32f2f;
 } 
+
+@media screen and (max-width: 950px) {
+  .reviewContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 20px;
+    margin-top: 0rem; */
+  }
+  
+  .reviewList {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 20px; */
+    justify-content: center;
+  }
+}
