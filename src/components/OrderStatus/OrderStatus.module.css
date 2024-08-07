@@ -80,6 +80,7 @@
         align-items: center;
         justify-content: center;
         gap: 5rem;
+        background-color: rgb(239, 239, 248);
     }
 
     .receipt  .ids, .quan {

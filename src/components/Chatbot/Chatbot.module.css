@@ -3,14 +3,13 @@
     bottom: 5px;
     right: 10px;
     z-index: 1000;
-    /* width: 300px; */
     transition: right 0.6s ease;
     display: flex;
     flex-direction: column-reverse;
 }
   
 .chatbotIcon {
-    /* background-color: red; */
+   
     width: 100%;
     display: flex;
     justify-content: end;
@@ -29,12 +28,9 @@
     width: 100%;
 }
 
-/* .glfuN {
-    background: black !important;
-} */
 @media screen and (max-width: 768px) {
     .chatbotIcon .icon{
       margin: 0;
     }
     
-} 
+}   

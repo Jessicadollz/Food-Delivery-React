@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Cart.module.css';
 import Chatbot from '../Chatbot/Chatbot';
-import Footer from '../Footer/Footer'
+import Footer from '../Footer/Footer';
+import logo from '../../assets/logo.png';
 
 function Cart({ cart, setCart }) {
   const [address, setAddress] = useState('');
@@ -50,9 +51,9 @@ function Cart({ cart, setCart }) {
       key: "rzp_test_w14dnADMuDa97D", // Enter the Key ID generated from the Dashboard
       amount: totalAmount * 100, // Amount is in currency subunits. Default currency is INR. Hence, 100 refers to 100 paise
       currency: "INR",
-      name: "Your Company Name",
+      name: "Jess Kitchen",
       description: "Food Payment Transaction",
-      image: "logo",
+      image: logo,
       handler: function (response) {
         const order_id = `order_${Math.floor(Math.random() * 1000000000)}`;
         const signature = `sig_${Math.floor(Math.random() * 1000000000)}`;
@@ -71,7 +72,7 @@ function Cart({ cart, setCart }) {
       },
       prefill: {
         name: "Amigo",
-        email: "",
+        email: "jd@gmail.com",
         contact: "9876543210"
       },
       notes: {

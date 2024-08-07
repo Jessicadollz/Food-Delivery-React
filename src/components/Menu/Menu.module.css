@@ -115,6 +115,7 @@
     margin: 2rem ;
     gap: 3rem;
     width: 100%;
+    /* z-index: 1000; */
 }
 
 .search label {
@@ -138,7 +139,7 @@
 .selCat, .selSort {
     width: 500px;
     margin: 0 1rem;
-    z-index: 100; 
+    z-index: 9; 
 }
 
 /* Favotites CSS */

@@ -14,7 +14,7 @@ function Chatbot() {
     const steps = [
       {
         id: 'Greet',
-        message: 'Hello, Welcome to our website',
+        message: 'Hello, Welcome to Jess Kitchen!',
         trigger: 'Ask Name'
       },
       {
@@ -56,9 +56,9 @@ function Chatbot() {
             trigger: "FoodEnquiry",
           },
           {
-            value: "Tiffin Enquiry",
-            label: "Tiffin Enquiry",
-            trigger: "TiffinEnquiry",
+            value: "Favorite Menu Enquiry",
+            label: "Favorite Menu Enquiry",
+            trigger: "FavoriteMenuEnquiry",
           },
           {
             value: "Delivery Issue",
@@ -80,13 +80,13 @@ function Chatbot() {
       {
         id: "FoodEnquiry",
         message:
-          "For food enquiry, please contact our restaurant at: 123-456-7890. You can also view our menu at: https://example.com/menu",
+          "For food enquiry, please contact our restaurant at: 9876543210. You can also view our menu at: https://jessk.com/menu",
           trigger: "AnythingElse",
       },
       {
-        id: "TiffinEnquiry",
+        id: "FavoriteMenuEnquiry",
         message:
-          "For tiffin enquiries, please contact our restaurant at: 123-456-7890. You can find more details about our tiffin service at: https://example.com/tiffin",
+          "For menu related enquiries, please contact our restaurant at: 9876543210. You can find more details about our services at: https://jessk.com/favorites",
           trigger: "AnythingElse",
       },
       {
@@ -141,6 +141,7 @@ function Chatbot() {
         )}
       </div>
     );
+  
   
 }
 

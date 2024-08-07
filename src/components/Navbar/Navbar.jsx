@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './Navbar.module.css';
 import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
 import logo from '../../assets/logo.png'
+import { auth } from '../firebase';
 
 function Navbar() {
   const navigate = useNavigate(); // Initialize useNavigate
@@ -9,8 +10,9 @@ function Navbar() {
 
   const handleLogout = () => {
     // Perform any necessary logout operations here, such as clearing user data from state or localStorage
-    navigate('/login', { replace: true });
-    // navigate('/login'); // Redirect to the login page
+    // navigate('/login', { replace: true });
+    auth.signOut();
+    navigate('/login'); // Redirect to the login page
   };
 
   const toggleMenu = () => {
