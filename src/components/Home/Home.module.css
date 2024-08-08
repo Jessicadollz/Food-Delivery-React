@@ -25,4 +25,8 @@
   .image {
     width: 90%;
   }
+
+  .reviews h1 {
+    text-align: center;
+  }
 }
