@@ -3,6 +3,8 @@
 
 A food delivery app built using React offers a dynamic and user-friendly interface for ordering food from a restaurant. Leveraging React's component-based architecture, this app provides interactive features like real-time menu browsing, secure payment processing, and order tracking. React's efficiency ensures smooth performance across different devices, enhancing the overall user experience.
 
+![Jess Kitchen](Website.PNG)
+
 ### Features
 - Real-time Menu Browsing: Explore various dishes from multiple restaurants with up-to-date information.
 - Secure Payment Processing: Ensure safe and reliable transactions for all your orders.
