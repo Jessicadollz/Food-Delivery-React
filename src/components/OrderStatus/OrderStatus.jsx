@@ -22,7 +22,7 @@ function OrderStatus() {
   if (!orderDetails) {
     return (
       <>
-        <h2 style={{ textAlign: "center", marginTop: "10rem", minHeight: "40vh" }}>Please place an order to view the status</h2>
+        <h2 style={{ textAlign: "center", marginTop: "10rem", minHeight: "45vh" }}>Please place an order to view the status</h2>
         <Footer />
       </>
     );
