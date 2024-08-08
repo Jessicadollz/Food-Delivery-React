@@ -1,5 +1,5 @@
 # Food Delivery App
-[Hosted Link](https://food-delivery-react-jessk.vercel.app/)
+[Hosted Link](https://food-delivery-jessk.vercel.app/)
 
 A food delivery app built using React offers a dynamic and user-friendly interface for ordering food from a restaurant. Leveraging React's component-based architecture, this app provides interactive features like real-time menu browsing, secure payment processing, and order tracking. React's efficiency ensures smooth performance across different devices, enhancing the overall user experience.
 
@@ -31,4 +31,4 @@ The app is built with a variety of components to ensure a modular and maintainab
 
 ## Hosted Link
 
-You can access a live demo of the project [here](https://food-delivery-react-jessk.vercel.app/).
+You can access a live demo of the project [here](https://food-delivery-jessk.vercel.app/).
