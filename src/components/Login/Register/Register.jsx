@@ -20,13 +20,19 @@ function Register() {
             await createUserWithEmailAndPassword(auth, email, password);
             const user = auth.currentUser;
             console.log(user);
-            if (user) {
-                await setDoc(doc(db, "Users", user.uid), {
-                    email: user.email,
-                    firstName: fname,
-                    lastName: lname,
-                });
-            }
+            // if (user) {
+            //     await setDoc(doc(db, "Users", user.uid), {
+            //         email: user.email,
+            //         firstName: fname,
+            //         lastName: lname,
+            //     });
+            // }
+            // Store user info in local storage
+            localStorage.setItem("user", JSON.stringify({
+                email: user.email,
+                firstName: fname,
+                lastName: lname,
+            }));
             alert("User Registered Successfully!");
             navigate("/login");
             // toast.success("User Registered Successfully!!!", {
@@ -34,6 +40,8 @@ function Register() {
             // });
         } catch(error) {
             console.log(error.message);
+            console.error("Error during registration:", error.message);
+            alert("Error: Mail already in use! " + error.message)
             // toast.success(error.message, {
             //     position: "bottom-center",
             // });
